@@ -4,6 +4,6 @@
 
 var askName = window.prompt('give me a name please');
 
-if (askName.toLowerCase === 'kali') {
-  window.alert('you got it')
-} 
+if (askName === 'kali') {
+  window.alert('you got it');
+}  
