@@ -122,13 +122,17 @@ guessAttemptCount = 6;
 while (guessAttemptCount > 0) {
   var foodGuessed = prompt('You have ' + guessAttemptCount + ' attempts left to guess ' + possbileGuesses.length + ' of my favorite foods');
   for (var j = 0; j < possbileGuesses.length; j++) {
-    if (possbileGuesses[j] === foodGuessed) {
-      alert('guessed that one of my favorite foods is ' + foodGuessed + ', and earned a point!');
+    if (j === 0) {
+      alert('you\'re out of guesses');
+    } else if (possbileGuesses[j] === foodGuessed) {
+      alert('You guessed that one of my favorite foods is ' + foodGuessed + ', and earned a point!');
       guessAttemptCount = -1;
       pointsEarned++;
-    } else { //BUG this gets called three times??
-      alert(foodGuessed + ' is a wrong answer');
+    } else {
       guessAttemptCount--;
+
+      ///this is a mess, count skips down by 2 now
+      //FIX IT!!!
     }
   }
 }
