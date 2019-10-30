@@ -15,11 +15,13 @@ for (i = 0; i < things.length; ++i) {
     alert('You like ' + things[i]);
     
     thingsLiked = thingsLiked + (things[i] + ' ');
-    } else if (answer === 'no' || answer === 'n') {
-      // console.log('You don\'t like ' + things[i]);
+  } else if (answer === 'no' || answer === 'n') {
+    // console.log(answer + 'is notYou don\'t like ' + things[i]);
     alert('You don\'t like ' + things[i]);
-    
     thingsDisliked = thingsDisliked + (things[i] + ' ');
+  } else {
+    console.log(answer + ' is not the answer we were looking for');
+    alert(answer + ' is not the answer we were looking for');
   }
 }
 
