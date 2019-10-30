@@ -37,3 +37,4 @@
 - **DONE** - Follow the Add, Commit, Push process. 
 
 - **DONE** - It should be evident in GitHub that commits are made regularly, and with good commit messages that explain the WHY of the commit.
+
