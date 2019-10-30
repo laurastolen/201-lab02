@@ -1,54 +1,32 @@
 'use strict';
 
-var text = 'Text';
-console.log(text);
-text.toLowerCase();
-console.log(text);
-text = text.toLowerCase();
+var things = ['dogs', 'cats', 'horses', 'elephants', 'mice']; 
+var thingsLiked = '';
+var thingsDisliked = '';
 
+var i = 0;
 
+for (i = 0; i < things.length; ++i) {
+  var answer = prompt('Do you like ' + things[i] + '\nY/No?');
+  answer = answer.toLowerCase();
 
-/////////////////////////////////////////////////////////////////////////
-//challange
-//ask the user a name
-//have a line of code that checks if the name is equal to kali
-//can chain if statments if necessary
-//if (answer === 'yes' || answer === 'YES') do not use
-// 
-///////////////////////////////////////
+  if (answer === 'yes' || answer === 'y') {
+    // console.log('You like ' + things[i]);
+    alert('You like ' + things[i]);
+    
+    thingsLiked = thingsLiked + (things[i] + ' ');
+    } else if (answer === 'no' || answer === 'n') {
+      // console.log('You don\'t like ' + things[i]);
+    alert('You don\'t like ' + things[i]);
+    
+    thingsDisliked = thingsDisliked + (things[i] + ' ');
+  }
+}
 
+var userName = prompt('What is your name?');
 
+// console.log('Hello ' + userName + '!\nWelcome to our site!!');
+alert('Hello ' + userName + '!\nWelcome to our site!!');
 
-
-// var doesUserLikePizza = confirm('do you like pizza?'); //returns boolean
-
-// if the user likes pizze. s/he has to buy me some. If not,
-// they have to go away from my sight
-
-// if (doesUserLikePizza === true) {
-//   alert('Great, buy me some');
-// } else {
-//   alert('oh.. :(');
-// }
-
-// var name = prompt('What is your name?');
-
-// if (name === 'kali') {
-//   alert('You\'re the best dog');
-// } else if(name === 'ginger') {
-//   alert('you are the 2nd best dog');
-// } else if (doesUserLikePizza) {
-//   console.log('Great buy me some pizza');
-// } else {
-//   console.log('oh... :(');
-// }
-
-////////////////////////////////////
-// var askName = window.prompt('give me a name please');
-
-// if (askName === 'kali') {
-//   window.alert('you got it');
-// } else {
-//   window.alert('nope not it');
-// }
-
+// console.log('Hello ' + userName + '!\nYou like: ' + thingsLiked + '\nYou don\'t like: ' + thingsDisliked);
+alert('Hello ' + userName + '!\n\nYou like: ' + thingsLiked + '\nYou don\'t like: ' + thingsDisliked);
