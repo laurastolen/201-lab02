@@ -28,5 +28,5 @@ var userName = prompt('What is your name?');
 // console.log('Hello ' + userName + '!\nWelcome to our site!!');
 alert('Hello ' + userName + '!\nWelcome to our site!!');
 
-// console.log('Hello ' + userName + '!\nYou like: ' + thingsLiked + '\nYou don\'t like: ' + thingsDisliked);
-alert('Hello ' + userName + '!\n\nYou like: ' + thingsLiked + '\nYou don\'t like: ' + thingsDisliked);
+// console.log('Things About ' + userName + '\n\nYou like: ' + thingsLiked + '\nYou don\'t like: ' + thingsDisliked);
+alert('Things About ' + userName + '\n\nYou like: ' + thingsLiked + '\nYou don\'t like: ' + thingsDisliked);
