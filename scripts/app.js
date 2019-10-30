@@ -1,5 +1,5 @@
 'use strict';
-
+var pointsEarned = 0;
 
 //  Math.random()
 
@@ -65,27 +65,26 @@
 // }
 
 /////////////////////////////
-// Guess a number
+// Guess a number - Question 6
 var numToGuess = 5;
 var guessAttemptCount = 4; 
 var numGuessedByUser = NaN;
-// do {
-//   var numGuessedByUser = prompt('Guess a number betwen 1 and 10');
-//   console.log('number guessed' + numGuessedByUser);
-//   console.log('guessAttemptCount' + guessAttemptCount);
-// }
-
-
 
 while (guessAttemptCount > 0) {
   numGuessedByUser = prompt('You have ' + guessAttemptCount + ' tries to guess a number between 1 and 10');
+  numGuessedByUser = Number(numGuessedByUser);
 
-  if (numToGuess === Number(numGuessedByUser)) {
+  if (numToGuess === numGuessedByUser) {
     alert('Awesome! You got it!');
     guessAttemptCount = 0;
+    pointsEarned++;
 
-  } else {
-    alert('number guessed is ' + numGuessedByUser + '\nGuess Attempt Count is ' + guessAttemptCount);
+  } else if (numGuessedByUser < numToGuess) {
+    alert(numGuessedByUser + 'is too low');
+    guessAttemptCount--;
+
+  } else if (numGuessedByUser > numToGuess) {
+    alert(numGuessedByUser + 'is too high');
     guessAttemptCount--;
   }
 }
@@ -121,3 +120,4 @@ while (guessAttemptCount > 0) {
 // alert('Things About ' + userName + '\n\nYou like: ' + thingsLiked + '\nYou don\'t like: ' + thingsDisliked);
 
 
+alert('You guessed ' + pointsEarned + ' questions correctly!!!');
