@@ -1,6 +1,15 @@
 'use strict';
 var pointsEarned = 0;
 
+// function getRandomInt(max) {
+//   return Math.floor(Math.random() * Math.floor(max));
+// }
+
+// console.log(getRandomInt(10));
+// // expected output: 0, 1 or 2
+
+// expected output: 0, 1 or 2
+
 //  Math.random()
 
 // ask them their name ... relentlessly
@@ -66,7 +75,7 @@ var pointsEarned = 0;
 
 /////////////////////////////
 // Guess a number - Question 6
-var numToGuess = 5;
+var numberToGuess = Math.floor(Math.random() * Math.floor(Number(10)));
 var guessAttemptCount = 4; 
 var numGuessedByUser = NaN;
 
@@ -74,16 +83,16 @@ while (guessAttemptCount > 0) {
   numGuessedByUser = prompt('You have ' + guessAttemptCount + ' tries to guess a number between 1 and 10');
   numGuessedByUser = Number(numGuessedByUser);
 
-  if (numToGuess === numGuessedByUser) {
+  if (numberToGuess === numGuessedByUser) {
     alert('Awesome! You got it!');
     guessAttemptCount = 0;
     pointsEarned++;
 
-  } else if (numGuessedByUser < numToGuess) {
+  } else if (numGuessedByUser < numberToGuess) {
     alert(numGuessedByUser + 'is too low');
     guessAttemptCount--;
 
-  } else if (numGuessedByUser > numToGuess) {
+  } else if (numGuessedByUser > numberToGuess) {
     alert(numGuessedByUser + 'is too high');
     guessAttemptCount--;
   }
