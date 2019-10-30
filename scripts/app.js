@@ -82,12 +82,13 @@ while (guessAttemptCount > 0) {
   if (numToGuess === Number(numGuessedByUser)) {
     alert('Awesome! You got it!');
     guessAttemptCount = 0;
-    
+
   } else {
     alert('number guessed is ' + numGuessedByUser + '\nGuess Attempt Count is ' + guessAttemptCount);
     guessAttemptCount--;
   }
 }
+
   // } else if {
   //   alert(numGuessedByUser + ' is not the correct answer');
   // }
