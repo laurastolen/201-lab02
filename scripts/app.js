@@ -76,6 +76,7 @@ var numGuessedByUser = NaN;
 // }
 
 
+
 while (guessAttemptCount > 0) {
   numGuessedByUser = prompt('You have ' + guessAttemptCount + ' tries to guess a number between 1 and 10');
 
@@ -87,20 +88,6 @@ while (guessAttemptCount > 0) {
     alert('number guessed is ' + numGuessedByUser + '\nGuess Attempt Count is ' + guessAttemptCount);
     guessAttemptCount--;
   }
-}
-
-  // } else if {
-  //   alert(numGuessedByUser + ' is not the correct answer');
-  // }
-
-  // console.log('number guessed' + numGuessedByUser);
-  // console.log('guessAttemptCount' + guessAttemptCount);
-// alert('Sorry, try again. You have ' + guessAttemptCount + ' left.'); 
-// do {
-//   var numGuessedByUser = prompt('Guess a number betwen 1 and 10');
-//   console.log('number guessed' + numGuessedByUser);
-//   console.log('guessAttemptCount' + guessAttemptCount);
-// }
 }
 
 /////////////////////////////
