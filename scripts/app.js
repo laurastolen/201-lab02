@@ -1,16 +1,11 @@
 'use strict';
 var pointsEarned = 0;
-
-// function getRandomInt(max) {
-//   return Math.floor(Math.random() * Math.floor(max));
-// }
-
-// console.log(getRandomInt(10));
-// // expected output: 0, 1 or 2
-
-// expected output: 0, 1 or 2
-
-//  Math.random()
+var numberToGuess = Math.floor(Math.random() * Math.floor(Number(10)));
+var guessAttemptCount = 0;
+var numberGuessedByUser = 0;
+var things = ['dogs', 'cats', 'horses', 'elephants', 'mice'];
+var thingsLiked = '';
+var thingsDisliked = '';
 
 // ask them their name ... relentlessly
 /*
@@ -72,10 +67,6 @@ var pointsEarned = 0;
 /////////////////////////////
 // Find out their likes, Questions 1-5
 
-var things = ['dogs', 'cats', 'horses', 'elephants', 'mice']; 
-var thingsLiked = '';
-var thingsDisliked = '';
-
 for (var i = 0; i < things.length; ++i) {
   var answer = prompt('Do you like ' + things[i] + '\nY/No?');
   answer = answer.toLowerCase();
@@ -83,7 +74,6 @@ for (var i = 0; i < things.length; ++i) {
   if (answer === 'yes' || answer === 'y') {
     // console.log('You like ' + things[i]);
     alert('You like ' + things[i]);
-    
     thingsLiked = thingsLiked + (things[i] + ' ');
   } else if (answer === 'no' || answer === 'n') {
     // console.log(answer + 'is notYou don\'t like ' + things[i]);
@@ -97,16 +87,14 @@ for (var i = 0; i < things.length; ++i) {
 
 /////////////////////////////
 // Guess a number - Question 6
-var numberToGuess = Math.floor(Math.random() * Math.floor(Number(10)));
-var guessAttemptCount = 4;
-var numberGuessedByUser = NaN;
+guessAttemptCount = 4;
 
 while (guessAttemptCount > 0) {
-  numberGuessedByUser = prompt('You have ' + guessAttemptCount + ' tries to guess a number between 1 and 10');
+  numberGuessedByUser = prompt('You have ' + guessAttemptCount + ' tries to guess a number between 0 and 9');
   numberGuessedByUser = Number(numberGuessedByUser);
 
   if (numberToGuess === numberGuessedByUser) {
-    alert('Awesome! You got it!');
+    alert('Awesome! You got it, and earned a point');
     guessAttemptCount = -1;
     pointsEarned++;
   } else if (numberGuessedByUser < numberToGuess) {
@@ -126,6 +114,30 @@ while (guessAttemptCount > 0) {
 
 ////////////////////
 //Question 7
+//create an array with multiple possible answers
+var possbileGuesses = ['pizza', 'pasta', 'salad'];
+//Give the users 6 attempts to guess the correct answer
+guessAttemptCount = 6;
+//loop through typed guesses
+while (guessAttemptCount > 0) {
+  var foodGuessed = prompt('You have ' + guessAttemptCount + ' attempts left to guess ' + possbileGuesses.length + ' of my favorite foods');
+  for (var j = 0; j < possbileGuesses.length; j++) {
+    if (possbileGuesses[j] === foodGuessed) {
+      alert('guessed that one of my favorite foods is ' + foodGuessed + ', and earned a point!');
+      guessAttemptCount = -1;
+      pointsEarned++;
+    } else { //BUG this gets called three times??
+      alert(foodGuessed + ' is a wrong answer');
+      guessAttemptCount--;
+    }
+  }
+}
+//check if guess matches an item in an array
+
+//if item matches, add point, bail
+
+//display the possible correct answers
+
 
 
 
