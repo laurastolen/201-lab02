@@ -61,24 +61,22 @@ var pointsEarned = 0;
   
 // }
 
-// var things = ['dogs', 'cats', 'horses', 'elephants', 'mice']; 
-// var thingsLiked = '';
-// var thingsDisliked = '';
-
 // var likesGinger;
 // do {
 //   likesGinger = prompt('do you like ginger?');
 //   likesGinger = likesGinger.toLowerCase();
 // } while (likesGinger !== 'no' && likesGinger !== 'yes') {
-  
-// }
 
+// }
 
 /////////////////////////////
 // Find out their likes, Questions 1-5
-var i = 0;
 
-for (i = 0; i < things.length; ++i) {
+var things = ['dogs', 'cats', 'horses', 'elephants', 'mice']; 
+var thingsLiked = '';
+var thingsDisliked = '';
+
+for (var i = 0; i < things.length; ++i) {
   var answer = prompt('Do you like ' + things[i] + '\nY/No?');
   answer = answer.toLowerCase();
 
@@ -114,11 +112,15 @@ while (guessAttemptCount > 0) {
   } else if (numberGuessedByUser < numberToGuess) {
     alert(numberGuessedByUser + ' is too low');
     guessAttemptCount--;
+    if (guessAttemptCount === 0) {
+      alert('Sorry, the correct answer was ' + numberToGuess);
+    }
   } else if (numberGuessedByUser > numberToGuess) {
     alert(numberGuessedByUser + ' is too high');
     guessAttemptCount--;
-  } else { //THERE IS A BUG HERE, THIS LINE NEVER DISPLAYS
-    alert('Sorry, the correct answer was ' + numberToGuess);
+    if (guessAttemptCount === 0) {
+      alert('Sorry, the correct answer was ' + numberToGuess);
+    }
   }
 }
 
