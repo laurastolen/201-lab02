@@ -22,9 +22,9 @@
 
   - **DONE** Display the user’s name back to them in your final message to the user.
 
-- Developer Style Guide
+- **DONE** - Developer Style Guide
 
-  - A style guide is a series of standards and practices that must be followed in order for your code to be accepted by the team. This can include variable naming, file structure, and process. Below is a list of practices that you will be required to follow within this lab:
+  - **DONE** - A style guide is a series of standards and practices that must be followed in order for your code to be accepted by the team. This can include variable naming, file structure, and process. Below is a list of practices that you will be required to follow within this lab:
 
   - **DONE** - Your JS file must contain a 'use strict' declaration at the top
 
