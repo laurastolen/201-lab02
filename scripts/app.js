@@ -20,7 +20,7 @@ for (i = 0; i < things.length; ++i) {
     alert('You don\'t like ' + things[i]);
     thingsDisliked = thingsDisliked + (things[i] + ' ');
   } else {
-    console.log(answer + ' is not the answer we were looking for');
+    // console.log(answer + ' is not the answer we were looking for');
     alert(answer + ' is not the answer we were looking for');
   }
 }
