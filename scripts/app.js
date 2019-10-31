@@ -7,63 +7,6 @@ var things = ['dogs', 'cats', 'horses', 'elephants', 'mice'];
 var thingsLiked = '';
 var thingsDisliked = '';
 
-// ask them their name ... relentlessly
-/*
-  write a loop that prompts them
-    save a variable with their answer
-  needs to meet a condition, is truthy
-    while loop (doesn't always need a count)
-      put prompt inside the loop
-  */
-// Ask them to gues at a food that I like 3 foods
-  /*
-  possibilities: in a variable, store tham in an array (refrigerator)
-  write a loop (while loop)
-    condidtion is based on two things:
-    compare guees to the possibilites and stop if correct
-    stop after 3
-    guessCount for user's guesses
-    increment the guessCount when they guess
-    three guesses to ask one correct food
-    save variables guesses, guess
-  */
-
-// guess how many dogs user owns 1 - 100000
-
-
-// var userName = prompt('Tell me your name please');
-// while (userName === '' || userName.length < 3 || userName === 0) {
-//   userName = prompt('No, I mean it, what is your name');
-// }
-
-// alert('sup, ' + userName + ' welcome to my awesome site!');
-
-
-// var favoriteFoods = ['pizza', 'shepherd\'s pie', 'falafel'];
-// var guessCount = 5;
-// var correctGuessFlag = false;
-// var theirGuessAtFood;
-
-// while (guessCount > 0 && correctGuessFlag === false) {
-//   theirGuessAtFood = prompt('try again');
-
-//   guessCount--;
-//   for (var i = 0; i < 3; i++){
-//     if (favoriteFoods[i] === theirGuessAtFood){
-//       correctGuessFlag = true;
-//       }
-//   }
-  
-// }
-
-// var likesGinger;
-// do {
-//   likesGinger = prompt('do you like ginger?');
-//   likesGinger = likesGinger.toLowerCase();
-// } while (likesGinger !== 'no' && likesGinger !== 'yes') {
-
-// }
-
 /////////////////////////////
 // Find out their likes, Questions 1-5
 
@@ -115,35 +58,28 @@ while (guessAttemptCount > 0) {
 ////////////////////
 //Question 7
 //create an array with multiple possible answers
-var possbileGuesses = ['pizza', 'pasta', 'salad'];
-//Give the users 6 attempts to guess the correct answer
-guessAttemptCount = 6;
-//loop through typed guesses
-while (guessAttemptCount > 0) {
-  var foodGuessed = prompt('You have ' + guessAttemptCount + ' attempts left to guess ' + possbileGuesses.length + ' of my favorite foods');
-  for (var j = 0; j < possbileGuesses.length; j++) {
-    if (j === 0) {
-      alert('you\'re out of guesses');
-    } else if (possbileGuesses[j] === foodGuessed) {
-      alert('You guessed that one of my favorite foods is ' + foodGuessed + ', and earned a point!');
-      guessAttemptCount = -1;
-      pointsEarned++;
-    } else {
-      guessAttemptCount--;
 
-      ///this is a mess, count skips down by 2 now
-      //FIX IT!!!
+var itemsInPocket = ['handses', 'fish-bones', 'goblins-teeth', 'wet shells', 'bat wings', 'sharp stone', 'knife', 'string', 'string or nothing', 'ring']
+var guessCount = 6;
+var correctGuessFlag = false;
+var guessedItem;
+
+
+while (guessCount > 0 && correctGuessFlag === false) {
+  guessedItem = prompt('What have I got in my pocket?')
+  guessCount--;
+  if (guessCount === 0) {
+    alert('that was your last guess')
+    break;
+  } 
+  for (var i = 0; i < itemsInPocket.length; i++){
+    if (itemsInPocket[i] === guessedItem) {
+      correctGuessFlag = true;
+      alert(guessedItem + ' you guessed it')
+      pointsEarned++
     }
   }
 }
-//check if guess matches an item in an array
-
-//if item matches, add point, bail
-
-//display the possible correct answers
-
-
-
 
 alert('You guessed ' + pointsEarned + ' questions correctly!!!');
 
