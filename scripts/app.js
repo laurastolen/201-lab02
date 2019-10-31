@@ -30,11 +30,7 @@ function likesGame() {
   }
 }
 
-var playLikesGame = prompt('Would you like to play the likes game?');
-playLikesGame = playLikesGame.toLowerCase();
-if (playLikesGame === 'yes' || playLikesGame === 'y') {
-  likesGame();
-}
+
 /////////////////////////////
 // Guess a number - Question 6
 
@@ -66,7 +62,6 @@ function numberGuessingGame() {
   }
 }
 
-numberGuessingGame();
 
 ////////////////////
 //Question 7
@@ -95,7 +90,25 @@ function pocketGuessingGame() {
   }
 }
 
-pocketGuessingGame();
+
+var playLikesGame = prompt('Would you like to play the likes game?');
+playLikesGame = playLikesGame.toLowerCase();
+if (playLikesGame === 'yes' || playLikesGame === 'y') {
+  likesGame();
+}
+
+var playLikesGame = prompt('Would you like to play the likes game?');
+playLikesGame = playLikesGame.toLowerCase();
+if (playLikesGame === 'yes' || playLikesGame === 'y') {
+  numberGuessingGame();
+}
+
+var playLikesGame = prompt('Would you like to play the likes game?');
+playLikesGame = playLikesGame.toLowerCase();
+if (playLikesGame === 'yes' || playLikesGame === 'y') {
+  pocketGuessingGame();
+}
+
 
 alert('You guessed ' + pointsEarned + ' questions correctly!!!');
 
