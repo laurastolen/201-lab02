@@ -10,24 +10,31 @@ var thingsDisliked = '';
 /////////////////////////////
 // Find out their likes, Questions 1-5
 
-for (var i = 0; i < things.length; ++i) {
-  var answer = prompt('Do you like ' + things[i] + '\nY/No?');
-  answer = answer.toLowerCase();
+function likesGame() {
+  for (var i = 0; i < things.length; ++i) {
+    var answer = prompt('Do you like ' + things[i] + '\nY/No?');
+    answer = answer.toLowerCase();
 
-  if (answer === 'yes' || answer === 'y') {
-    // console.log('You like ' + things[i]);
-    alert('You like ' + things[i]);
-    thingsLiked = thingsLiked + (things[i] + ' ');
-  } else if (answer === 'no' || answer === 'n') {
-    // console.log(answer + 'is notYou don\'t like ' + things[i]);
-    alert('You don\'t like ' + things[i]);
-    thingsDisliked = thingsDisliked + (things[i] + ' ');
-  } else {
-    // console.log(answer + ' is not the answer we were looking for');
-    alert(answer + ' is not the answer we were looking for');
+    if (answer === 'yes' || answer === 'y') {
+      // console.log('You like ' + things[i]);
+      alert('You like ' + things[i]);
+      thingsLiked = thingsLiked + (things[i] + ' ');
+    } else if (answer === 'no' || answer === 'n') {
+      // console.log(answer + 'is notYou don\'t like ' + things[i]);
+      alert('You don\'t like ' + things[i]);
+      thingsDisliked = thingsDisliked + (things[i] + ' ');
+    } else {
+      // console.log(answer + ' is not the answer we were looking for');
+      alert(answer + ' is not the answer we were looking for');
+    }
   }
 }
 
+var playLikesGame = prompt('Would you like to play the likes game?');
+playLikesGame = playLikesGame.toLowerCase();
+if (playLikesGame === 'yes' || playLikesGame === 'y') {
+  likesGame();
+}
 /////////////////////////////
 // Guess a number - Question 6
 
