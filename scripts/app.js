@@ -65,27 +65,30 @@ numberGuessingGame();
 //Question 7
 //create an array with multiple possible answers
 
-var itemsInPocket = ['handses', 'fish-bones', 'goblins-teeth', 'wet shells', 'bat wings', 'sharp stone', 'knife', 'string', 'string or nothing', 'ring']
-var guessCount = 6;
-var correctGuessFlag = false;
-var guessedItem;
+function pocketGuessingGame() {
+  var itemsInPocket = ['handses', 'fish-bones', 'goblins-teeth', 'wet shells', 'bat wings', 'sharp stone', 'knife', 'string', 'string or nothing', 'ring']
+  var guessCount = 6;
+  var correctGuessFlag = false;
+  var guessedItem;
 
-
-while (guessCount > 0 && correctGuessFlag === false) {
-  guessedItem = prompt('What have I got in my pocket?')
-  guessCount--;
-  if (guessCount === 0) {
-    alert('that was your last guess')
-    break;
-  }
-  for (var i = 0; i < itemsInPocket.length; i++) {
-    if (itemsInPocket[i] === guessedItem) {
-      correctGuessFlag = true;
-      alert(guessedItem + ' you guessed it')
-      pointsEarned++
+  while (guessCount > 0 && correctGuessFlag === false) {
+    guessedItem = prompt('What have I got in my pocket?')
+    guessCount--;
+    if (guessCount === 0) {
+      alert('that was your last guess')
+      break;
+    }
+    for (var i = 0; i < itemsInPocket.length; i++) {
+      if (itemsInPocket[i] === guessedItem) {
+        correctGuessFlag = true;
+        alert(guessedItem + ' you guessed it')
+        pointsEarned++
+      }
     }
   }
 }
+
+pocketGuessingGame();
 
 alert('You guessed ' + pointsEarned + ' questions correctly!!!');
 
