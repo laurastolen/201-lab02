@@ -30,30 +30,36 @@ for (var i = 0; i < things.length; ++i) {
 
 /////////////////////////////
 // Guess a number - Question 6
-guessAttemptCount = 4;
 
-while (guessAttemptCount > 0) {
-  numberGuessedByUser = prompt('You have ' + guessAttemptCount + ' tries to guess a number between 0 and 9');
-  numberGuessedByUser = Number(numberGuessedByUser);
+function numberGuessingGame() {
 
-  if (numberToGuess === numberGuessedByUser) {
-    alert('Awesome! You got it, and earned a point');
-    guessAttemptCount = -1;
-    pointsEarned++;
-  } else if (numberGuessedByUser < numberToGuess) {
-    alert(numberGuessedByUser + ' is too low');
-    guessAttemptCount--;
-    if (guessAttemptCount === 0) {
-      alert('Sorry, the correct answer was ' + numberToGuess);
-    }
-  } else if (numberGuessedByUser > numberToGuess) {
-    alert(numberGuessedByUser + ' is too high');
-    guessAttemptCount--;
-    if (guessAttemptCount === 0) {
-      alert('Sorry, the correct answer was ' + numberToGuess);
+  guessAttemptCount = 4;
+
+  while (guessAttemptCount > 0) {
+    numberGuessedByUser = prompt('You have ' + guessAttemptCount + ' tries to guess a number between 0 and 9');
+    numberGuessedByUser = Number(numberGuessedByUser);
+
+    if (numberToGuess === numberGuessedByUser) {
+      alert('Awesome! You got it, and earned a point');
+      guessAttemptCount = -1;
+      pointsEarned++;
+    } else if (numberGuessedByUser < numberToGuess) {
+      alert(numberGuessedByUser + ' is too low');
+      guessAttemptCount--;
+      if (guessAttemptCount === 0) {
+        alert('Sorry, the correct answer was ' + numberToGuess);
+      }
+    } else if (numberGuessedByUser > numberToGuess) {
+      alert(numberGuessedByUser + ' is too high');
+      guessAttemptCount--;
+      if (guessAttemptCount === 0) {
+        alert('Sorry, the correct answer was ' + numberToGuess);
+      }
     }
   }
 }
+
+numberGuessingGame();
 
 ////////////////////
 //Question 7
@@ -71,8 +77,8 @@ while (guessCount > 0 && correctGuessFlag === false) {
   if (guessCount === 0) {
     alert('that was your last guess')
     break;
-  } 
-  for (var i = 0; i < itemsInPocket.length; i++){
+  }
+  for (var i = 0; i < itemsInPocket.length; i++) {
     if (itemsInPocket[i] === guessedItem) {
       correctGuessFlag = true;
       alert(guessedItem + ' you guessed it')
